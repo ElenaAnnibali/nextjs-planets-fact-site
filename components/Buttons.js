@@ -27,6 +27,15 @@ const buttonsStyles = css`
     color: #38384f;
     background-color: transparent;
     text-align: left;
+    cursor: pointer;
+
+    :hover {
+      background-color: #38384f;
+    }
+
+    :active {
+      background-color: #419ebb;
+    }
 
     span {
       font-size: 12px;

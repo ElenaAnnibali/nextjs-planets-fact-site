@@ -53,7 +53,7 @@ const mainStyles = css`
   }
 `;
 
-export default function Home() {
+export default function Venus() {
   return (
     <div css={siteStyles}>
       <Head>
@@ -65,24 +65,24 @@ export default function Home() {
       <main css={mainStyles}>
         <Image
           className="image"
-          src={'/images/planet-mercury.svg'}
+          src={'/images/planet-venus.svg'}
           width="290"
           height="290"
           alt="mercury"
         />
         <div>
-          <h1 className="title">mercury</h1>
+          <h1 className="title">venus</h1>
           <p className="paragraph">
-            Mercury is the smallest planet in the Solar System and the closest
-            to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-            shortest of all the Sun&apos;s planets. Mercury is one of four
-            terrestrial planets in the Solar System, and is a rocky body like
-            Earth.
+            Venus is the second planet from the Sun. It is named after the Roman
+            goddess of love and beauty. As the brightest natural object in
+            Earth&apos;s night sky after the Moon, Venus can cast shadows and
+            can be, on rare occasions, visible to the naked eye in broad
+            daylight.
           </p>
           <span className="source">
             Source :{' '}
             <a
-              href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+              href="https://en.wikipedia.org/wiki/Venus"
               rel="noopener noreferrer"
               target="_blank"
             >

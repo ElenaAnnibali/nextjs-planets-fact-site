@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { League_Spartan } from '@next/font/google';
+import Link from 'next/link';
 
 const spartanBold = League_Spartan({
   weight: '700',
@@ -31,6 +32,10 @@ const headerStyles = css`
     margin-top: 16px;
     mix-blend-mode: normal;
     opacity: 0.75;
+  }
+
+  a {
+    cursor: pointer;
   }
 
   .title {
@@ -68,13 +73,19 @@ export default function Header(props) {
         <nav>
           <ul>
             <li>
-              <a className={spartanBold.className}>mercury</a>
+              <Link href="/" className={spartanBold.className}>
+                mercury
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>venus</a>
+              <Link href="/venus" className={spartanBold.className}>
+                venus
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>heart</a>
+              <a href="/earth" className={spartanBold.className}>
+                heart
+              </a>
             </li>
             <li>
               <a className={spartanBold.className}>mars</a>

@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
             font-family: ${antonio.style.fontFamily}, sans-serif;
           }
           p {
-            font-family: ${leagueSpartanLight.style.fontFamily}, sans-serif;
+            font-family: ${leagueSpartan.style.fontFamily}, sans-serif;
 
             font-size: 14px;
             line-height: 25px;
