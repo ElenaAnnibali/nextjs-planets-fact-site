@@ -11,31 +11,32 @@ const spartanBold = League_Spartan({
 const headerStyles = css`
   text-transform: uppercase;
 
-  nav {
-    position: relative;
-    width: 100%;
+  a {
+    color: #ffffff;
+    text-decoration: none;
 
-    top: 0;
-
-    float: right;
-    width: fit-content;
-  }
-
-  ul {
-    list-style: none;
-    display: block;
-  }
-
-  ul li {
-    float: left;
-    margin-right: 33px;
-    margin-top: 16px;
     mix-blend-mode: normal;
     opacity: 0.75;
   }
 
-  a {
-    cursor: pointer;
+  nav {
+    width: fit-content;
+  }
+
+  ul {
+    display: flex;
+    gap: 33px;
+    list-style-type: none;
+    margin-left: 735px;
+    margin-right: 0;
+  }
+
+  ul > li {
+    /* float: left; */
+    display: inline-block;
+    margin-top: 16px;
+    mix-blend-mode: normal;
+    opacity: 0.75;
   }
 
   .title {
@@ -58,7 +59,7 @@ const headerStyles = css`
     position: absolute;
     min-width: 1440px;
     width: 100%;
-    height: 85px;
+    height: 27px;
     border-bottom: 1px solid #ffffff;
     mix-blend-mode: normal;
     opacity: 0.2;
@@ -83,24 +84,34 @@ export default function Header(props) {
               </Link>
             </li>
             <li>
-              <a href="/earth" className={spartanBold.className}>
-                heart
-              </a>
+              <Link href="/earth" className={spartanBold.className}>
+                earth
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>mars</a>
+              <Link href="/mars" className={spartanBold.className}>
+                mars
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>jupiter</a>
+              <Link href="/jupiter" className={spartanBold.className}>
+                jupiter
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>saturn</a>
+              <Link href="/saturn" className={spartanBold.className}>
+                saturn
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>uranus</a>
+              <Link href="/uranus" className={spartanBold.className}>
+                uranus
+              </Link>
             </li>
             <li>
-              <a className={spartanBold.className}>neptune</a>
+              <Link href="/neptune" className={spartanBold.className}>
+                neptune
+              </Link>
             </li>
           </ul>
         </nav>

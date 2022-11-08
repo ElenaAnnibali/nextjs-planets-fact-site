@@ -1,10 +1,64 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { League_Spartan } from '@next/font/google';
 import Head from 'next/head';
 import Image from 'next/image';
-import Buttons from '../components/Buttons';
-import Cards from '../components/Cards';
 import Header from '../components/Header';
+
+const spartanBold = League_Spartan({
+  weight: '700',
+  subset: ['latin'],
+});
+
+const buttonsStyles = css`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  width: 350px;
+  height: 176px;
+  left: 925px;
+  top: 577px;
+  text-transform: uppercase;
+
+  button {
+    width: 350px;
+    height: 48px;
+    mix-blend-mode: normal;
+    // opacity: 0.2;
+    border: 1px solid #38384f;
+    color: #38384f;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+
+    :hover {
+      background-color: #38384f;
+    }
+
+    :active {
+      background-color: #eda249;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 25px;
+      /* identical to box height, or 208% */
+
+      letter-spacing: 2.57143px;
+      text-transform: uppercase;
+
+      margin-left: 25px;
+
+      color: #ffffff;
+    }
+
+    .number {
+      margin-left: 28px;
+      margin-top: 12px;
+    }
+  }
+`;
 
 const siteStyles = css`
   background: url('/images/background-stars.svg');
@@ -14,7 +68,6 @@ const siteStyles = css`
 
 const mainStyles = css`
   .title {
-    text-align: center;
     position: absolute;
     width: 263px;
     height: 104px;
@@ -50,6 +103,38 @@ const mainStyles = css`
     left: 925px;
     top: 480px;
     line-height: 25px;
+  }
+`;
+
+const cardsStyles = css`
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 165px;
+  top: 840px;
+
+  .card {
+    width: 255px;
+    height: 128px;
+    border: 1px solid #38384f;
+
+    h4 {
+      text-transform: uppercase;
+      margin-left: 23px;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 40px;
+      margin: 0;
+      /* margin-left: 23px;
+      margin-top: 16px; */
+      position: relative;
+      left: 23px;
+      top: 8px;
+    }
   }
 `;
 
@@ -90,8 +175,38 @@ export default function Venus() {
               <i className="sourceIcon" />
             </a>
           </span>
-          <Buttons className="mercuryButtons" />
-          <Cards />
+          <div css={buttonsStyles}>
+            <button>
+              <span className="number">01</span>
+              <span className={spartanBold.className}>overview</span>
+            </button>
+            <button>
+              <span className="number">02</span>
+              <span className={spartanBold.className}>internal structure</span>
+            </button>
+            <button>
+              <span className="number">03</span>
+              <span className={spartanBold.className}>surface geology</span>
+            </button>
+          </div>
+          <div css={cardsStyles}>
+            <div className="card">
+              <h4>rotation time</h4>
+              <h2>243 Days</h2>
+            </div>
+            <div className="card">
+              <h4>revolution time</h4>
+              <h2>224.7 days</h2>
+            </div>
+            <div className="card">
+              <h4>radius</h4>
+              <h2>6,051.8 km</h2>
+            </div>
+            <div className="card">
+              <h4>average temp.</h4>
+              <h2>471°c</h2>
+            </div>
+          </div>
         </div>
       </main>
     </div>
